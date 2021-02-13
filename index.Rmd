@@ -1,0 +1,18 @@
+---
+title: "Yida Wang"
+description: |
+  Welcome to my website!
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+![](professional2.jpg){width=150}
+
+## About me:
+
+## Education:
+## University of Pennsylvania 2016 MS Criminology (focus on policy)
+## University of Toronto 2015 Hons BA Sociology & Criminology

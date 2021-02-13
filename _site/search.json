@@ -1,0 +1,28 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "CURRICULUM VITAE",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-02-13T04:11:00-05:00"
+    },
+    {
+      "path": "blog.html",
+      "title": "BLOG",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-02-13T04:11:01-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Yida Wang",
+      "description": "Welcome to my website!\n",
+      "author": [],
+      "contents": "\r\n\r\nAbout me:\r\nEducation:\r\nUniversity of Pennsylvania 2016 MS Criminology (focus on policy)\r\nUniversity of Toronto 2015 Hons BA Sociology & Criminology\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-02-13T04:11:01-05:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

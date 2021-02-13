@@ -1,0 +1,21 @@
+---
+title: "McGregor Vs Poirier 2 - A Disney Ending"
+description: |
+  The amazing ending to UFC 257.
+author:
+  - name: Yida Wang
+date: 02-13-2021
+preview: dustin1.webp
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+One of the most highly anticipated rematches of the decade.
+
+
