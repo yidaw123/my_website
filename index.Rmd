@@ -1,18 +1,18 @@
 ---
 title: "Yida Wang"
-description: |
-  Welcome to my website!
+
 site: distill::distill_website
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+![](images/professional2.jpg){width=50%}
 
-![](professional2.jpg){width=150}
+My name is __Yida Wang__, and welcome to my website. I enjoy a wide array of hobbies from BJJ to chess, and from video games to binging documentaries so I'll pretty much write anything and everything.
 
-## About me:
+I am very passionate about social policies and, in particular, criminal justice related discussions. Feel free to reach out using any of the links above and thank you for visiting!
 
-## Education:
-## University of Pennsylvania 2016 MS Criminology (focus on policy)
-## University of Toronto 2015 Hons BA Sociology & Criminology
+
+# Education:
+
+University of Pennsylvania 2016 MS Criminology (concentration in policy)
+
+University of Toronto 2015 Hons BA Sociology & Criminology

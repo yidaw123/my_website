@@ -1,11 +1,6 @@
 ---
 title: "CURRICULUM VITAE"
-description: |
-  Some additional details about the website
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+![](images/professional3.jpg){width=150}
 
-![](professional3.jpg){width=150}
