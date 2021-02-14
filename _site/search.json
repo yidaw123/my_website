@@ -5,28 +5,28 @@
       "title": "CURRICULUM VITAE",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-02-14T01:05:29-05:00"
+      "last_modified": "2021-02-14T01:42:32-05:00"
     },
     {
       "path": "blog.html",
       "title": "BLOG",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-02-14T01:05:30-05:00"
+      "last_modified": "2021-02-14T01:42:33-05:00"
     },
     {
       "path": "index.html",
       "title": "Yida Wang",
       "author": [],
       "contents": "\r\n\r\nMy name is Yida Wang, and welcome to my website. I enjoy a wide array of hobbies from BJJ to chess, and from video games to binging documentaries so I’ll pretty much write anything and everything.\r\nI am very passionate about social policies and, in particular, criminal justice related discussions. Feel free to reach out using any of the links above and thank you for visiting!\r\nEducation:\r\nUniversity of Pennsylvania 2016 MS Criminology (concentration in policy)\r\nUniversity of Toronto 2015 Hons BA Sociology & Criminology\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-02-14T01:05:30-05:00"
+      "last_modified": "2021-02-14T01:42:34-05:00"
     },
     {
       "path": "sidebar.html",
       "title": "sidebar",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n  \r\n    \r\n      \r\n        \r\n        \r\n        \r\n      \r\n      \r\n    \r\n    \r\n      \r\n  POSTS\r\n\r\n\r\n  ABOUT ME\r\n\r\n\r\n  \r\n    CV\r\n     \r\n    \r\n  \r\n  INTERACTIVE (coming soon)\r\n    \r\n    \r\n      PDF\r\n    \r\n  \r\n\r\n  \r\n    \r\n     \r\n  \r\n\r\n\r\n  \r\n    \r\n     \r\n  \r\n\r\n      \r\n  \r\n\r\n\r\n\r\n\r\n\r\n\r\nsidebar\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbout Me\r\n\r\n\r\n\r\nResearcher | Data Scientist | Data Visualizer\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// add bootstrap table styles to pandoc tables\r\nfunction bootstrapStylePandocTables() {\r\n  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');\r\n}\r\n$(document).ready(function () {\r\n  bootstrapStylePandocTables();\r\n});\r\n\r\n\r\n\r\n$(document).ready(function () {\r\n  window.buildTabsets(\"TOC\");\r\n});\r\n\r\n$(document).ready(function () {\r\n  $('.tabset-dropdown > .nav-tabs > li').click(function () {\r\n    $(this).parent().toggleClass('nav-tabs-open')\r\n  });\r\n});\r\n\r\n  (function () {\r\n    var script = document.createElement(\"script\");\r\n    script.type = \"text/javascript\";\r\n    script.src  = \"https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\";\r\n    document.getElementsByTagName(\"head\")[0].appendChild(script);\r\n  })();\r\n",
-      "last_modified": "2021-02-14T01:05:31-05:00"
+      "last_modified": "2021-02-14T01:42:34-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
