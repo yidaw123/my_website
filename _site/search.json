@@ -5,28 +5,28 @@
       "title": "CURRICULUM VITAE",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-02-14T02:17:16-05:00"
+      "last_modified": "2021-02-14T22:33:20-05:00"
     },
     {
       "path": "blog.html",
       "title": "BLOG",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-02-14T02:17:17-05:00"
+      "last_modified": "2021-02-14T22:33:21-05:00"
     },
     {
       "path": "index.html",
       "title": "Yida Wang",
       "author": [],
-      "contents": "\r\n\r\nMy name is Yida Wang, and welcome to my website. I enjoy a wide array of hobbies from BJJ to chess, and from video games to binging documentaries so I’ll pretty much write anything and everything.\r\nI am very passionate about social policies and, in particular, criminal justice related discussions. Feel free to reach out using any of the links above and thank you for visiting!\r\nEducation:\r\nUniversity of Pennsylvania 2016 MS Criminology (concentration in policy)\r\nUniversity of Toronto 2015 Hons BA Sociology & Criminology\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-02-14T02:17:18-05:00"
+      "contents": "\r\n\r\n\r\nbody {\r\n  background: linear-gradient(130deg, #76b5c5 25%, #1a536e 75%);\r\n}\r\nhtml {\r\n  /*-- Main font colors --*/\r\n  --title-color:     #ffffff;\r\n  --header-color:    rgba(255, 255, 255, 0.8);\r\n  --body-color:      rgba(255, 255, 255, 1);\r\n  --aside-color:     rgba(255, 255, 255, 0.6);\r\n  --fig-cap-color:   rgba(255, 255, 255, 0.6);\r\n}\r\n.distill-site-footer {\r\n  --text-color:       #2b8196;\r\n  --text-size:        15px;\r\n  --hover-color:      black;\r\n  --bkgd-color:       white;\r\n}\r\nd-appendix {\r\n  display: none!important;\r\n}\r\nd-article {\r\n  color: white;\r\n}\r\n.profile-photo {\r\n  vertical-align: middle;\r\n  padding: 1.5rem!important;\r\n  box-sizing: border-box;\r\n}\r\n.profile-photo img {\r\n  // border: 1px solid black;\r\n  border-radius: 50%!important;\r\n  width: 12rem!important;\r\n}\r\n\r\n\r\n\r\nMy name is Yida Wang, and welcome to my website. I enjoy a wide array of hobbies from BJJ to chess, and from video games to binging documentaries so I’ll pretty much write anything and everything.\r\nI am very passionate about social policies and, in particular, criminal justice related discussions. Feel free to reach out using any of the links above and thank you for visiting!\r\nEducation:\r\nUniversity of Pennsylvania 2016 MS Criminology (concentration in policy)\r\nUniversity of Toronto 2015 Hons BA Sociology & Criminology\r\nWebsite Under construction 👷\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-02-14T22:33:21-05:00"
     },
     {
       "path": "sidebar.html",
       "title": "sidebar",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n  \r\n    \r\n      \r\n        \r\n        \r\n        \r\n      \r\n      \r\n    \r\n    \r\n      \r\n  POSTS\r\n\r\n\r\n  ABOUT ME\r\n\r\n\r\n  \r\n    CV\r\n     \r\n    \r\n  \r\n  INTERACTIVE (coming soon)\r\n    \r\n    \r\n      PDF\r\n    \r\n  \r\n\r\n  \r\n    \r\n     \r\n  \r\n\r\n\r\n  \r\n    \r\n     \r\n  \r\n\r\n      \r\n  \r\n\r\n\r\n\r\n\r\n\r\n\r\nsidebar\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbout Me\r\n\r\n\r\n\r\nResearcher | Data Scientist | Data Visualizer\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// add bootstrap table styles to pandoc tables\r\nfunction bootstrapStylePandocTables() {\r\n  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');\r\n}\r\n$(document).ready(function () {\r\n  bootstrapStylePandocTables();\r\n});\r\n\r\n\r\n\r\n$(document).ready(function () {\r\n  window.buildTabsets(\"TOC\");\r\n});\r\n\r\n$(document).ready(function () {\r\n  $('.tabset-dropdown > .nav-tabs > li').click(function () {\r\n    $(this).parent().toggleClass('nav-tabs-open')\r\n  });\r\n});\r\n\r\n  (function () {\r\n    var script = document.createElement(\"script\");\r\n    script.type = \"text/javascript\";\r\n    script.src  = \"https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\";\r\n    document.getElementsByTagName(\"head\")[0].appendChild(script);\r\n  })();\r\n",
-      "last_modified": "2021-02-14T02:17:19-05:00"
+      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n  \r\n    \r\n      \r\n        \r\n        \r\n        \r\n      \r\n      \r\n    \r\n    \r\n      \r\n  POSTS\r\n\r\n\r\n  ABOUT ME\r\n\r\n\r\n  \r\n    CV\r\n     \r\n    \r\n  \r\n  INTERACTIVE (coming soon)\r\n    \r\n    \r\n      PDF\r\n    \r\n  \r\n      \r\n  \r\n    \r\n     \r\n  \r\n\r\n\r\n  \r\n    \r\n     \r\n  \r\n\r\n\r\n  \r\n    \r\n     \r\n  \r\n\r\n      \r\n  \r\n\r\n\r\n\r\n\r\n\r\n\r\nsidebar\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbout Me\r\n\r\n\r\n\r\nResearcher | Data Scientist | Data Visualizer\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// add bootstrap table styles to pandoc tables\r\nfunction bootstrapStylePandocTables() {\r\n  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');\r\n}\r\n$(document).ready(function () {\r\n  bootstrapStylePandocTables();\r\n});\r\n\r\n\r\n\r\n$(document).ready(function () {\r\n  window.buildTabsets(\"TOC\");\r\n});\r\n\r\n$(document).ready(function () {\r\n  $('.tabset-dropdown > .nav-tabs > li').click(function () {\r\n    $(this).parent().toggleClass('nav-tabs-open')\r\n  });\r\n});\r\n\r\n  (function () {\r\n    var script = document.createElement(\"script\");\r\n    script.type = \"text/javascript\";\r\n    script.src  = \"https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\";\r\n    document.getElementsByTagName(\"head\")[0].appendChild(script);\r\n  })();\r\n",
+      "last_modified": "2021-02-14T22:33:22-05:00"
     }
   ],
   "collections": ["posts/posts.json"]

@@ -2177,22 +2177,73 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
   .distill-site-header {
     --title-size:       28px;
-    --text-color:       #21130d;
+    --text-color:       white;
     --text-size:        22px;
-    --hover-color:      white;
-    --bkgd-color:       #76b5c5;
+    --hover-color:      black;
+    --bkgd-color:       #2b8196;
   }
   
   .distill-site-footer {
-    --text-color:       #21130d;
-    --text-size:        18px;
-    --hover-color:      white;
-    --bkgd-color:       #76b5c5;
+    --text-color:       white;
+    --text-size:        15px;
+    --hover-color:      black;
+    --bkgd-color:       #2b8196;
   }
   
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
-  </style>
+  d-article a {
+    border-bottom: 2px solid #424242;
+    text-decoration: none;
+  }
+  
+  /*  code color highlights and bg */ 
+    d-article div.sourceCode pre {
+      border-left: 2px solid rgba(121,0,62,0.1);
+      background-color: #fff5f6!important;
+        padding-top: 10px;
+      padding-bottom: 10px;
+      overflow-x: auto!important;
+    }
+  
+  /* scroll bar color */
+    
+    ::-webkit-scrollbar {
+      width: 15px;
+      height: 10px;
+    }
+  
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(137, 196, 244, 1); 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(44, 130, 201, 1); 
+    -webkit-box-shadow: inset 0 0 6px rgba(137, 196, 244, 1); 
+  }
+  
+  /* end scroll bar color */
+    
+    d-article pre {
+      background-color: #e3e3e3;
+        padding: 10px;
+    }
+  
+  code span.fu, code span.kw {
+    color: #AD0059;
+  }
+  
+  div.sourceCode {
+    margin: 0;
+  }
+  
+  pre, d-article pre {
+    margin: 0;
+  }</style>
   <style type="text/css">
   /* base style */
   
@@ -2375,10 +2426,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
+<span class="logo">
+<img src="images/icon2.png"/>
+</span>
 <a href="index.html" class="title">Yida Wang</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
 <a href="blog.html">POSTS</a>
 <a href="about.html">ABOUT ME</a>
 <div class="nav-dropdown">
@@ -2393,11 +2444,17 @@ CV
 <a href="CV/website_resume.pdf">PDF</a>
 </div>
 </div>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+</div>
+<div class="nav-right">
 <a href="https://www.linkedin.com/in/yidawang/">
 <i class="fa fa-linkedin" aria-hidden="true"></i>
 </a>
 <a href="https://github.com/yidaw123">
 <i class="fa fa-github" aria-hidden="true"></i>
+</a>
+<a href="blog.xml">
+<i class="fa fa-rss" aria-hidden="true"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
@@ -2416,12 +2473,51 @@ CV
 
 
 <div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+<style type="text/css">
+body {
+  background: linear-gradient(130deg, #76b5c5 25%, #1a536e 75%);
+}
+html {
+  /*-- Main font colors --*/
+  --title-color:     #ffffff;
+  --header-color:    rgba(255, 255, 255, 0.8);
+  --body-color:      rgba(255, 255, 255, 1);
+  --aside-color:     rgba(255, 255, 255, 0.6);
+  --fig-cap-color:   rgba(255, 255, 255, 0.6);
+}
+.distill-site-footer {
+  --text-color:       #2b8196;
+  --text-size:        15px;
+  --hover-color:      black;
+  --bkgd-color:       white;
+}
+d-appendix {
+  display: none!important;
+}
+d-article {
+  color: white;
+}
+.profile-photo {
+  vertical-align: middle;
+  padding: 1.5rem!important;
+  box-sizing: border-box;
+}
+.profile-photo img {
+  // border: 1px solid black;
+  border-radius: 50%!important;
+  width: 12rem!important;
+}
+
+</style>
+</div>
 <p><img src="images/professional2.jpg" style="width:50.0%" /></p>
 <p>My name is <strong>Yida Wang</strong>, and welcome to my website. I enjoy a wide array of hobbies from BJJ to chess, and from video games to binging documentaries so I’ll pretty much write anything and everything.</p>
 <p>I am very passionate about social policies and, in particular, criminal justice related discussions. Feel free to reach out using any of the links above and thank you for visiting!</p>
 <h1 id="education">Education:</h1>
 <p>University of Pennsylvania 2016 MS Criminology (concentration in policy)</p>
 <p>University of Toronto 2015 Hons BA Sociology &amp; Criminology</p>
+<h2 id="website-under-construction">Website Under construction 👷</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

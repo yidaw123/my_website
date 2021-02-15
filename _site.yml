@@ -8,7 +8,8 @@ output_dir: "_site"
 custom: _sidebar.html
 navbar:
   search: TRUE
-  right:
+  logo: images/icon2.png
+  left:
     - text: "POSTS"
       href: blog.html
     - text: "ABOUT ME"
@@ -20,10 +21,13 @@ navbar:
           - text: "---"
           - text: "PDF"
             href: CV/website_resume.pdf
+  right:          
     - icon: fa fa-linkedin
       href: https://www.linkedin.com/in/yidawang/
     - icon: fa fa-github
       href: https://github.com/yidaw123
+    - icon: fa fa-rss
+      href: blog.xml
     
 collections:
   posts:
