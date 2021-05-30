@@ -2,17 +2,15 @@ name: "website"
 title: "Yida Wang"
 description: |
   Yida Wang
+base_url: https://yidawang@netlify.app
 theme: yida_theme.css
-favicon: images/icon1.png
+favicon: images/capture.jpg
 output_dir: "_site"
 custom: _sidebar.html
 navbar:
-  search: TRUE
-  logo: images/icon2.png
-  left:
-    - text: "POSTS"
-      href: blog.html
-    - text: "ABOUT ME"
+  search: true
+  right:  
+    - text: "EXPERIENCE"
       href: about.html
     - text: "CV"
       menu:
@@ -21,7 +19,6 @@ navbar:
           - text: "---"
           - text: "PDF"
             href: CV/website_resume.pdf
-  right:          
     - icon: fa fa-linkedin
       href: https://www.linkedin.com/in/yidawang/
     - icon: fa fa-github
@@ -38,5 +35,9 @@ collections:
     feed_items_max: false
     custom: _sidebar.html
     
-output: distill::distill_article
+output: 
+  distill::distill_article:
+    toc: true
+    css: yida_theme.css
+      
 
