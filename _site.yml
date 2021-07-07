@@ -4,7 +4,7 @@ description: |
   Yida Wang
 base_url: https://yidawang.netlify.app/
 theme: yida_theme.css
-favicon: images/icon2.JPG
+favicon: images\icon2.JPG
 output_dir: "_site"
 custom: _sidebar.html
 navbar:
