@@ -19,7 +19,7 @@ navbar:
           - text: "---"
           - text: "PDF"
             href: CV/website_resume.pdf
-    - image: images/tableau.png
+    - image: images\tableau.png
       href: https://public.tableau.com/profile/yida.wang24        
     - icon: fa fa-linkedin
       href: https://www.linkedin.com/in/yidawang/
