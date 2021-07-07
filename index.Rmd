@@ -33,7 +33,7 @@ cat(paste(trestles_mod, collapse = "\n"), file = system.file("pandoc_templates/t
 
 <b> <font size="+2"> Welcome to my website! </font> </b>
 
-I currently work as a Statistician for [the Ontario Ministry of the Solicitor General](https://www.mcscs.jus.gov.on.ca/english/default.html)'s law enforcement branch - [the Ontario Provincial Police](https://www.opp.ca/). Previously, I worked as a Project Manager and an Embedded Research Analyst for [the University of Chicago Crime & Education Labs](https://urbanlabs.uchicago.edu/) consulting for the Chicago Police Department, the Chicago Mayor's Office, and a number of public agencies and outreach organizations on crime trends, resource allocations, policy recommendations, and data analysis. Prior to entering the public sector, I worked in the private sector as a Senior Market Researcher for a market research firm in Toronto.
+I currently work as a Statistician for [the Ontario Ministry of the Solicitor General](https://www.mcscs.jus.gov.on.ca/english/default.html)'s law enforcement branch - [the Ontario Provincial Police](https://www.opp.ca/). Previously, I worked as a Project Manager and an Embedded Research Analyst for [the University of Chicago Crime & Education Labs](https://urbanlabs.uchicago.edu/) consulting for the Chicago Police Department, the Chicago Mayor's Office, and a number of public agencies and outreach organizations on crime trends, resource allocations, policy recommendations, and data analysis. Prior to entering the public and academic sectors, I worked as a Senior Market Researcher for a market research firm in Toronto.
 
 
 <br>
@@ -61,15 +61,15 @@ I currently work as a Statistician for [the Ontario Ministry of the Solicitor Ge
 :::: {style="display: grid; grid-template-columns: 40% 50%; grid-column-gap: 30px; line-height: 1.5rem;"}
 
 ::: {}
-<span class = "columnname"> Research Interests </span>
+<span class = "columnname"> Research & Academic Interests </span>
 
-* Criminal justice policy
+* Social policies (criminal justice, welfare, education, and public health)
 
 * Law enforcement & policing reform
 
-* Social causes of crime
+* Social contributors/causes of crime
 
-* Social policies & economics
+* Social psychology & behavioral economics
 :::
 
 ::: {}
