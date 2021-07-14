@@ -33,7 +33,7 @@ cat(paste(trestles_mod, collapse = "\n"), file = system.file("pandoc_templates/t
 
 <b> <font size="+2"> Welcome to my website! </font> </b>
 
-I currently work as a Statistician for [the Ontario Ministry of the Solicitor General](https://www.mcscs.jus.gov.on.ca/english/default.html)'s law enforcement branch - [the Ontario Provincial Police](https://www.opp.ca/). Previously, I worked as a Project Manager and an Embedded Research Analyst for [the University of Chicago Crime & Education Labs](https://urbanlabs.uchicago.edu/) consulting for the Chicago Police Department, the Chicago Mayor's Office, and a number of public agencies and outreach organizations on crime trends, resource allocations, policy recommendations, and data analysis. Prior to entering the public and academic sectors, I worked as a Senior Market Researcher for a market research firm in Toronto.
+I currently work as a Statistician for [the Ontario Ministry of the Solicitor General](https://www.mcscs.jus.gov.on.ca/english/default.html)'s law enforcement branch - [the Ontario Provincial Police](https://www.opp.ca/). Previously, I worked as a Project Manager and an Embedded Research Analyst for [the University of Chicago Crime & Education Labs](https://urbanlabs.uchicago.edu/) consulting for the Chicago Police Department, the Chicago Mayor's Office, and a number of public agencies and outreach organizations on policy recommendations and data analytics. Prior to entering the public and academic sectors, I worked as a Senior Market Researcher for a market research firm in Toronto.
 
 
 <br>
@@ -92,9 +92,3 @@ I currently work as a Statistician for [the Ontario Ministry of the Solicitor Ge
 
 
 <br>
-
-
-
-
-
-## Website Currently Under Construction 👷

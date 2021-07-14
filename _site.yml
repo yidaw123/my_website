@@ -2,7 +2,7 @@ name: "website"
 title: "Yida Wang"
 description: |
   Yida Wang
-base_url: https://yidawang.netlify.app/
+base_url: https://yidawang.ca/
 theme: yida_theme.css
 favicon: images/favicon.ico
 output_dir: "_site"

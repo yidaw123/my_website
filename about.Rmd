@@ -2,7 +2,10 @@
 title: "Professional Experience"
 description: |
   A quick snapshot of my past work and projects.
-site: distill::distill_website
+output:
+  distill::distill_article:
+    css: bio_header.css
+    self_contained: false
 ---
 
 ```{r setup, include=FALSE}
@@ -16,7 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 During my time at the University of Chicago I primarily worked on the SDSC Project - a collaborative smart policing initiative within the Chicago Police Department's Bureau of Operations. Initially, I performed crime and resource analyses for 3 CPD districts and provided advice and data insight for the District Commanders while assisted in different capacities for many other districts across the city. Thereafter, I worked as the analyst for the Area South Deputy Chief while simultaneously taking on the role of ATC (Area Technology Center) Analyst for the Area South Detectives (The ATC is essentially the Bureau of Detectives' version of SDSC, though with vastly different tools, equipment, and procedures). Following crime focused work I would move to the CPD HQ to work on a number of traffic, personnel, and consent decree related projects.
 
-![Here you see me (top left) delivering a briefing to senior CPD staff](images/sdsc.jpg){width=150}
+![Here I am (top left), delivering a briefing to senior CPD staff](images/sdsc.jpg){width=150}
 
 * UChicago articles regarding the history and background of the project: [[history](https://urbanlabs.uchicago.edu/attachments/c83b0a5180de9f7fec83d5ffdaa75fa6a9233a38/store/a307ce9c99429b8e276b2fa982ce2df90a44f1207258a7c1ca95914f1342/city+club+Jan+2018_FINAL.PDF) | [overview](https://urbanlabs.uchicago.edu/programs/strategic-decision-support-centers-sdscs) |  [funding1](https://news.uchicago.edu/story/10-million-grant-will-support-crime-lab-collaboration-police-innovation) | [funding2](https://urbanlabs.uchicago.edu/attachments/c294048f0ccedb2d0f7570c95a9dc27a7d751738/store/5dad037e6ec7c7da989307b597c68437c1a36780da701fba95abc4566d32/Mayor+Emanuel%2C+Ken+Griffin%2C+University+of+Chicago+Crime+Lab+Announce+%2410....pdf)].
 * Research paper drafted by several of my colleagues containing more specific information on the project: [[research paper](pdf/sdsc.pdf)] 
@@ -29,7 +32,7 @@ During my time at the University of Chicago I primarily worked on the SDSC Proje
 One critical component of my work with the City of Chicago Office of the Mayor was the Regional Coordination Meeting where I was in charge of the South Side data. The goal of the meeting was to identify and tackle violent crimes and other related issues with a wide range of agencies and organizations, including UChicago Crime Lab (with myself as representative), UChicago Medicine, Chicago Police Dept, Chicago Mayor's Office, Chicago Dept of Street and Sanitation, Chicago Park District, Cook County State's Attorney's Office, Chicago CRED, and a number of other public agencies and outreach/non-profits. 
 
 
-The bi-weekly meetings required myself and another analyst to manually produce a bi-weekly data/ stats packet to reflect the number of fatal shootings, non-fatal shootings, and non-shooting homicides. As time went on, we realized there should be a more efficient method of displaying and disseminating the crime analytics, thus the VR dashboard was born. The beta version received approval from the Chicago former Deputy Mayor of Public Safety Susan Lee and former US Secretary of Education Arne Duncan and our team continued to polish the dashboard. After about 6 months of work, the VR Dashboard was officially launched on the City of Chicago's Website as the first ever public data dashboard of the city. As one of the two analysts who created the dashboard, I also produced monthly update/troubleshooting newsletters, designed the cover page and base map of the dashboard, and trained and presented the tool to a wide range of public agencies, outreach organizations, and other stakeholders. 
+The bi-weekly meetings required myself and another analyst to manually produce a bi-weekly data/ stats packet to reflect the number of fatal shootings, non-fatal shootings, and non-shooting homicides. As time went on, we realized there should be a more efficient method of displaying and disseminating the crime analytics, thus the VR dashboard was born. After about 6 months of work, the VR Dashboard was officially launched on the City of Chicago's Website as the first ever public data dashboard of the city. As one of the two analysts who created the dashboard, I also produced monthly update/troubleshooting newsletters, designed the cover page and base map of the dashboard, and trained and presented the tool to a wide range of public agencies, outreach organizations, and other stakeholders. 
 
 ![](images/vrdash.jpg)
 
@@ -59,7 +62,7 @@ I have also attended a number of law enforcement and analytics conferences, incl
 
 ![Posing with my lovely colleagues from UChicago and CPD](images/tableaugroup.jpg){width=85%}
 
-![Me at the Tableau 2019 Data Night Out... after a comlimentary makeup](images/tableauparty.jpg){width=55%}
+![Me at the Tableau 2019 Data Night Out... after a complimentary makeup](images/tableauparty.jpg){width=55%}
 
 * If you're interested in Tableau events and conferences please click here [[Tableau](https://www.tableau.com/community/eventshttps://www.tableau.com/community/events)]
 

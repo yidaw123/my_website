@@ -1,0 +1,10 @@
+d-title {
+padding-top:8rem;
+font-weight: 800;
+color: white;
+background: 
+    /* bottom, image */
+    url(images/bio2.jpg);
+background-size:cover !important;
+background-position: top -45px left;
+}
