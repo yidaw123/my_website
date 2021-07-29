@@ -130,24 +130,11 @@ d-appendix {
   
 }
 
-d-title {
-  background: #575757;
-  color: white;
 
 /* Remove the vertical line between left and right sides on homepage */
-
 html body div.container-fluid.d-none.d-lg-block.d-xl-block div.d-flex.row.flex-row.vh-100 div.d-flex.flex-column.vh-100.border-left {
 	display: none !important;
 }
 
 /* Buttons on home page */
-
-.btn-outline-dark {
-    background-color: #4682b4;
-    color: #fff;
-    border: 0px;
-}
-
-.btn-outline-dark:hover {
-    background-color: #6c9dc6;
-}
+<button type="button" class="btn btn-outline-dark">Dark</button>

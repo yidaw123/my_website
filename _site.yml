@@ -21,11 +21,11 @@ navbar:
             href: CV/website_resume.pdf
     - image: images\tableau.png
       href: https://public.tableau.com/profile/yida.wang24        
-    - icon: fa fa-linkedin
+    - icon: fa-linkedin
       href: https://www.linkedin.com/in/yidawang/
-    - icon: fa fa-github
+    - icon: fa-github
       href: https://github.com/yidaw123
-    - icon: fa fa-rss
+    - icon: fa-rss
       href: blog.xml
     
 collections:
