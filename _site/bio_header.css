@@ -1,10 +1,50 @@
 d-title {
 padding-top:8rem;
 font-weight: 800;
+font-size:32px;
 color: white;
 background: 
     /* bottom, image */
     url(images/bio2.jpg);
 background-size:cover !important;
 background-position: top -45px left;
+}
+
+d-article h1{
+  font-size: 34px;
+  line-height: 0.2em;
+}
+
+d-article h2 {
+  font-size: 27px;
+  line-height: 0.2em;
+}
+
+.d-contents {
+  --heading-size:    20px;
+  --contents-size:   14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+d-article {
+    contain: none;
+  }
+#TOC {
+  position: fixed;
+  z-index: 50;
+  background: none;     /* transparent */
+  left: 1.25em;        /* changes the left edge gap */
+  right: 78em;
+  bottom: 7em
+  padding: 9px;           /* optional */
+  border-radius: 3px;      /* optional */
+  }
+
+/* Hide the ToC when resized to mobile or tablet:  480px, 768px, 900px */
+@media screen and (max-width: 900px) {
+#TOC {
+    position: relative;
+  }
 }

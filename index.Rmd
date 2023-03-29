@@ -33,7 +33,9 @@ cat(paste(trestles_mod, collapse = "\n"), file = system.file("pandoc_templates/t
 
 <b> <font size="+2"> Welcome to my website! </font> </b>
 
-I currently work as a Statistician for [the Ontario Ministry of the Solicitor General](https://www.mcscs.jus.gov.on.ca/english/default.html)'s law enforcement branch - [the Ontario Provincial Police](https://www.opp.ca/). Previously, I worked as a Project Manager and an Embedded Research Analyst for [the University of Chicago Crime & Education Labs](https://urbanlabs.uchicago.edu/) consulting for the Chicago Police Department, the Chicago Mayor's Office, and a number of public agencies and outreach organizations on policy recommendations and data analytics. Prior to entering the public and academic sectors, I worked as a Senior Market Researcher for a market research firm in Toronto.
+I'm currently an Analytics Manager for [Circana](https://www.circana.com/) (formerly IRI and the NPD Group), one of the largest market research consulting firms in the world, overseeing a talented team of analysts to generate actionable insights for our global clients through forecasting, machine learning, and advanced analytics.  
+
+Prior to entering the private sector, I worked as a Statistician for [the Ontario Ministry of the Solicitor General](https://www.mcscs.jus.gov.on.ca/english/default.html)'s law enforcement branch - [the Ontario Provincial Police](https://www.opp.ca/). Before that, I was a Project Manager and an Embedded Research Analyst at [the University of Chicago Crime & Education Labs](https://urbanlabs.uchicago.edu/) consulting for the Chicago Police Department, the Chicago Mayor's Office, and a number of public agencies and outreach organizations on data analytics, policy analysis, and change management. 
 
 
 <br>
@@ -61,15 +63,19 @@ I currently work as a Statistician for [the Ontario Ministry of the Solicitor Ge
 :::: {style="display: grid; grid-template-columns: 40% 50%; grid-column-gap: 30px; line-height: 1.5rem;"}
 
 ::: {}
-<span class = "columnname"> Research & Academic Interests </span>
+<span class = "columnname"> Areas of Expertise </span>
 
-* Social policies (criminal justice, welfare, education, and public health)
+* Data analysis, management, and visualization
 
-* Law enforcement & policing reform
+* Business intelligence/ analytics
 
-* Social contributors/causes of crime
+* Quantitative and qualitative research
 
-* Social psychology & behavioral economics
+* Business operations and consulting
+
+* Product and project management
+
+
 :::
 
 ::: {}
@@ -83,6 +89,7 @@ I currently work as a Statistician for [the Ontario Ministry of the Solicitor Ge
 <br>
 <li class = "grad-item">   BA in Criminology & Sociology (Hons), 2015 <br> <p class = "grad-location"> [University of Toronto St. George](https://www.crimsl.utoronto.ca/), Toronto </p> 
 </li>
+
 
 </ul>
 
