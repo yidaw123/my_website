@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Project and Product Management
 In my current role as an Analytics Manager, I oversee our forecasting product - the Pricing and Promotion Simulator (for more information on what the tool can do please click [here](https://www.npd.com/products/price-and-promotion-optimization/)). In this capacity I test the product, ETLs, and new features (QC, debugging, and etc), manage all simulator related work (analyses, reports, trainings, and presentations/Q & A sessions for senior/executive level clients), and leading a team of analysts to generate invaluable and actionable insights.
 
-![The 2022 merger of IRI and the NPD Group helped propel the new combined organization even higher in the echelons of global market research firms.](images/Circana.jpg)
+![The 2022 merger of IRI and the NPD Group helped propel the new organization even higher in the echelons of global market research firms.](images/Circana.jpg)
 
 My expertise in market research consulting spans across many business verticals, including tech, CPG, retail, media, and general merchandise. I'm experienced in generating insights through quantitative (big data, predictive analytics, and forecasting) and qualitative analyses (surveys, focus groups, and consumer behaviors). 
 
