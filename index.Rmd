@@ -33,9 +33,9 @@ cat(paste(trestles_mod, collapse = "\n"), file = system.file("pandoc_templates/t
 
 <b> <font size="+2"> Welcome to my website! </font> </b>
 
-I'm currently an Analytics Manager for [Circana](https://www.circana.com/) (formerly IRI and the NPD Group), one of the largest market research consulting firms in the world, overseeing a talented team of analysts to generate actionable insights for our global clients through forecasting, machine learning, and advanced analytics.  
+I'm currently a Senior Data Science Manager II at [Circana](https://www.circana.com/) (formerly IRI and the NPD Group), one of the world's leading market research consulting firms. I lead a high-performing team of consultants, managers, and analysts. Together, we harness forecasting, machine learning, and advanced analytics to deliver actionable insights that drive strategic decision-making for global clients.
 
-Prior to entering the private sector, I worked as a Statistician for [the Ontario Ministry of the Solicitor General](https://www.ontario.ca/page/ministry-solicitor-general)'s law enforcement branch - [the Ontario Provincial Police](https://www.opp.ca/). Before that, I was a Project Manager and an Embedded Research Analyst at [the University of Chicago Crime & Education Labs](https://urbanlabs.uchicago.edu/) consulting for the Chicago Police Department, the Chicago Mayor's Office, and a number of public agencies and outreach organizations on data analytics, policy analysis, and change management. 
+Before transitioning to the private sector,, I worked as a Statistician for [the Ontario Ministry of the Solicitor General](https://www.ontario.ca/page/ministry-solicitor-general)'s law enforcement branch - [the Ontario Provincial Police](https://www.opp.ca/). Prior to that, I was a Project Manager and an Embedded Research Analyst at [the University of Chicago Crime & Education Labs](https://urbanlabs.uchicago.edu/) where I consulted for the Chicago Police Department, the Chicago Mayor's Office, and various public agencies and outreach organizations. My work focused on data analytics, policy analysis, and change management to support evidence-based decision-making. 
 
 
 <br>
