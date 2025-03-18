@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>Yida Wang: Professional Experience</title>
@@ -457,8 +459,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
   <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
@@ -787,6 +789,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -827,9 +830,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -924,6 +939,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1028,10 +1048,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1689,6 +1705,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1766,8 +1788,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1793,12 +1816,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1863,7 +1887,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1874,6 +1913,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1973,6 +2037,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1995,7 +2061,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2424,7 +2490,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2653,6 +2719,7 @@ CV
 
 <div class="d-title">
 <h1>Professional Experience</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p><p>A quick snapshot of my past work and projects.</p></p>
@@ -2664,269 +2731,105 @@ CV
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#circana-formerly-iri-and-npd-group"
-id="toc-circana-formerly-iri-and-npd-group">Circana (formerly IRI and
-NPD Group)</a>
+<li><a href="#circana-formerly-iri-and-npd-group" id="toc-circana-formerly-iri-and-npd-group">Circana (formerly IRI and NPD Group)</a>
 <ul>
-<li><a href="#project-and-product-management"
-id="toc-project-and-product-management">Project and Product
-Management</a></li>
-<li><a href="#coding-and-machine-learning"
-id="toc-coding-and-machine-learning">Coding and Machine
-Learning</a></li>
+<li><a href="#project-and-product-management" id="toc-project-and-product-management">Project and Product Management</a></li>
+<li><a href="#coding-and-machine-learning" id="toc-coding-and-machine-learning">Coding and Machine Learning</a></li>
 </ul></li>
-<li><a href="#ontario-provincial-police"
-id="toc-ontario-provincial-police">Ontario Provincial Police</a>
+<li><a href="#ontario-provincial-police" id="toc-ontario-provincial-police">Ontario Provincial Police</a>
 <ul>
-<li><a href="#data-analysis" id="toc-data-analysis">Data
-Analysis</a></li>
-<li><a href="#business-operations" id="toc-business-operations">Business
-Operations</a></li>
+<li><a href="#data-analysis" id="toc-data-analysis">Data Analysis</a></li>
+<li><a href="#business-operations" id="toc-business-operations">Business Operations</a></li>
 </ul></li>
-<li><a href="#university-of-chicago-crime-lab"
-id="toc-university-of-chicago-crime-lab">University of Chicago Crime
-Lab</a>
+<li><a href="#university-of-chicago-crime-lab" id="toc-university-of-chicago-crime-lab">University of Chicago Crime Lab</a>
 <ul>
-<li><a href="#sdsc-strategic-decision-support-center"
-id="toc-sdsc-strategic-decision-support-center">SDSC (Strategic Decision
-Support Center)</a></li>
-<li><a href="#city-of-chicago-violence-reduction-dashboard"
-id="toc-city-of-chicago-violence-reduction-dashboard">City of Chicago:
-Violence Reduction Dashboard</a></li>
-<li><a href="#chicago-police-dept.-consent-decree"
-id="toc-chicago-police-dept.-consent-decree">Chicago Police Dept.
-Consent Decree</a></li>
+<li><a href="#sdsc-strategic-decision-support-center" id="toc-sdsc-strategic-decision-support-center">SDSC (Strategic Decision Support Center)</a></li>
+<li><a href="#city-of-chicago-violence-reduction-dashboard" id="toc-city-of-chicago-violence-reduction-dashboard">City of Chicago: Violence Reduction Dashboard</a></li>
+<li><a href="#chicago-police-dept.-consent-decree" id="toc-chicago-police-dept.-consent-decree">Chicago Police Dept. Consent Decree</a></li>
 </ul></li>
-<li><a href="#participated-conferences"
-id="toc-participated-conferences">Participated Conferences</a></li>
+<li><a href="#participated-conferences" id="toc-participated-conferences">Participated Conferences</a></li>
 </ul>
 </nav>
 </div>
-<h1 id="circana-formerly-iri-and-npd-group">Circana (formerly IRI and
-NPD Group)</h1>
-<h2 id="project-and-product-management">Project and Product
-Management</h2>
-<p>In my current role as an Analytics Manager, I oversee our forecasting
-product - the Pricing and Promotion Simulator (for more information on
-what the tool can do please click <a
-href="https://www.npd.com/products/price-and-promotion-optimization/">here</a>).
-In this capacity I test the product, ETLs, and new features (QC,
-debugging, and etc), manage all simulator related work (analyses,
-reports, trainings, and presentations/Q &amp; A sessions for
-senior/executive level clients), and leading a team of analysts to
-generate invaluable and actionable insights.</p>
+<h1 id="circana-formerly-iri-and-npd-group">Circana (formerly IRI and NPD Group)</h1>
+<h2 id="project-and-product-management">Project and Product Management</h2>
+<p>In my current role as a Senior Manager II - Data Science, I oversee several pricing analytics products (for more information on what the tools can do please click <a href="https://www.circana.com/solutions/alwayson-analytics/">here</a>. In this capacity I lead a team of consultants, managers, and analysts to generate actionable insights that drive strategic decision-making. I am responsible for testing products, ETLs, and new features, as well as ensuring quality control and debugging for optimal performance. Additionally, I manage all analytics-related deliverables, including analyses, reports, trainings, and executive-level presentations and Q&amp;A sessions.”</p>
 <figure>
-<img src="images/Circana.jpg"
-alt="The 2022 merger of IRI and the NPD Group helped propel the new combined organization even higher in the echelons of global market research firms." />
-<figcaption aria-hidden="true">The 2022 merger of IRI and the NPD Group
-helped propel the new combined organization even higher in the echelons
-of global market research firms.</figcaption>
+<img src="images/Circana.jpg" alt="The 2022 merger of IRI and the NPD Group helped propel the new combined organization even higher in the echelons of global market research firms." />
+<figcaption aria-hidden="true">The 2022 merger of IRI and the NPD Group helped propel the new combined organization even higher in the echelons of global market research firms.</figcaption>
 </figure>
-<p>My expertise in market research consulting spans across many business
-verticals, including tech, CPG, retail, media, and general merchandise.
-I’m experienced in generating insights through quantitative (big data,
-predictive analytics, and forecasting) and qualitative analyses
-(surveys, focus groups, and consumer behaviors).</p>
+<p>My expertise in market research consulting spans multiple business verticals, including technology, CPG, retail, media, and general merchandise. I specialize in generating insights through both quantitative methods—such as big data analytics, predictive modeling, and forecasting—and qualitative approaches, including surveys, focus groups, and consumer behavior analysis.</p>
 <h2 id="coding-and-machine-learning">Coding and Machine Learning</h2>
-<p>As someone who has always enjoyed the hands-on aspect of data
-science, I try to (whenever possible) dive into coding projects on my
-own. Some of the tools I fiddle around with in my day-to-day include:
-SAS, SQL, and Python.</p>
-<p>I’m currently working to improve my Python skills and learning to
-deploy ML models within Databricks. I love learning but sometimes I get
-carried away and overestimate how productive I can be and enroll in way
-more <a href="https://www.udemy.com/">Udemy</a>, <a
-href="https://www.edx.org/">edX</a>, and <a
-href="https://www.datacamp.com/">DataCamp</a> courses than I can
-manage…</p>
+<p>Beyond my leadership responsibilities, I remain deeply engaged in the hands-on aspects of data science. Whenever possible, I take on coding projects to refine and expand my technical skills. In my day-to-day work, I frequently leverage tools such as SQL, SAS, and Python to explore data, develop models, and enhance analytics capabilities.</p>
+<p>I’m currently working to improve my Python skills and learning to deploy ML models within Databricks. I love learning but sometimes I get carried away and overestimate how productive I can be and enroll in way more <a href="https://www.udemy.com/">Udemy</a>, <a href="https://www.edx.org/">edX</a>, and <a href="https://www.datacamp.com/">DataCamp</a> courses than I can manage…</p>
 <p><br></p>
 <h1 id="ontario-provincial-police">Ontario Provincial Police</h1>
 <h2 id="data-analysis">Data Analysis</h2>
-<p>During my tenure at the OPP (Business Management Bureau), I primarily
-led the traffic portfolio focusing on roadway fatalities, injuries,
-collisions, and etc. I was also heavily involved in other data projects,
-including crime, personnel, and resource allocation.</p>
-<p>While most of my work is classified in nature, you can find many
-crime and justice related reports our unit has helped compile for
-Statistics Canada as [<a
-href="https://www150.statcan.gc.ca/n1/en/type/data?subject_levels=35">raw
-data</a>] and as [<a
-href="https://www150.statcan.gc.ca/n1/en/type/analysis?subject_levels=35">analyses</a>].</p>
+<p>During my tenure at the Ontario Provincial Police (Business Management Bureau), I primarily led the traffic portfolio, focusing on roadway fatalities, injuries, and collisions. In addition, I was actively involved in various data projects related to crime, personnel, and resource allocation.</p>
+<p>While much of my work remains classified, many crime and justice-related reports that our unit contributed to can be found through the Statistics Canada Website: <a href="https://www150.statcan.gc.ca/n1/en/type/data?subject_levels=35">raw data</a> and as <a href="https://www150.statcan.gc.ca/n1/en/type/analysis?subject_levels=35">analyses</a>.</p>
 <h2 id="business-operations">Business Operations</h2>
-<p>In an effort to streamline the reporting process, I led the effort to
-automate existing Excel reports into PowerBI dashboards, drafted
-standardized SOPs, and created training videos and documentations.</p>
-<p>OPP officers are often contracted out to smaller municipalities and
-townships. In this capacity, I managed the finance and personnel
-statistics model to determine the cost of OPP contracts based on a
-number of factors/variables.</p>
-<p>I also oversaw 50% of the unit’s procurement work, e.g. working with
-vendors (including SAS) to determine the most optimal product package
-needed, creating business cases, and managing vendor contracts.</p>
+<p>To enhance efficiency in reporting, I led the automation of existing Excel reports into Power BI dashboards, developed standardized SOPs, and created training materials, including videos and documentation.</p>
+<p>In addition, I managed the finance and personnel statistics model used to determine the cost of OPP contracts for smaller municipalities and townships, incorporating various factors and key variables.</p>
+<p>I also oversaw 50% of the unit’s procurement operations, collaborating with vendors (including SAS) to identify optimal product packages, draft business cases, and manage vendor contracts.</p>
 <p><br></p>
-<h1 id="university-of-chicago-crime-lab">University of Chicago Crime
-Lab</h1>
-<h2 id="sdsc-strategic-decision-support-center">SDSC (Strategic Decision
-Support Center)</h2>
-<p>During my time at the University of Chicago I primarily worked on the
-SDSC Project - a collaborative smart policing initiative within the
-Chicago Police Department’s Bureau of Operations. Initially, I performed
-crime and resource analyses for 3 CPD districts and provided advice and
-data insight for the District Commanders while assisted in different
-capacities for many other districts across the city. Thereafter, I
-worked as the analyst for the Area South Deputy Chief while
-simultaneously taking on the role of ATC (Area Technology Center)
-Analyst for the Area South Detectives (The ATC is essentially the Bureau
-of Detectives’ version of SDSC, though with vastly different tools,
-equipment, and procedures). Following crime focused work I would move to
-the CPD HQ to work on a number of traffic, personnel, and consent decree
-related projects.</p>
+<h1 id="university-of-chicago-crime-lab">University of Chicago Crime Lab</h1>
+<h2 id="sdsc-strategic-decision-support-center">SDSC (Strategic Decision Support Center)</h2>
+<p>During my time at the University of Chicago, I primarily worked on the SDSC Project—a collaborative smart policing initiative within the Chicago Police Department’s Bureau of Operations. Initially, I conducted crime and resource analyses for three CPD districts, providing data-driven insights and strategic recommendations to District Commanders. I also assisted in various capacities across multiple districts citywide.</p>
+<p>Subsequently, I served as the analyst for the Area South Deputy Chief while also taking on the role of ATC (Area Technology Center) Analyst for the Area South Detectives. The ATC, essentially the Bureau of Detectives’ counterpart to SDSC, operated with vastly distinct tools, equipment, and procedures.</p>
+<p>Following my work in crime analytics, I transitioned to CPD Headquarters, where I contributed to projects focused on traffic, personnel management, and Consent Decree compliance.</p>
 <figure>
-<img src="images/sdsc.jpg" width="150"
-alt="Here I am (top left), delivering a briefing to senior CPD staff" />
-<figcaption aria-hidden="true">Here I am (top left), delivering a
-briefing to senior CPD staff</figcaption>
+<img src="images/sdsc.jpg" width="150" alt="Here I am (top left), delivering a briefing to senior CPD staff" />
+<figcaption aria-hidden="true">Here I am (top left), delivering a briefing to senior CPD staff</figcaption>
 </figure>
 <ul>
-<li><p>UChicago articles regarding the history and background of the
-project: [<a
-href="https://urbanlabs.uchicago.edu/attachments/c83b0a5180de9f7fec83d5ffdaa75fa6a9233a38/store/a307ce9c99429b8e276b2fa982ce2df90a44f1207258a7c1ca95914f1342/city+club+Jan+2018_FINAL.PDF">history</a>
-| <a
-href="https://urbanlabs.uchicago.edu/programs/strategic-decision-support-centers-sdscs">overview</a>
-| <a
-href="https://news.uchicago.edu/story/10-million-grant-will-support-crime-lab-collaboration-police-innovation">funding1</a>
-| <a
-href="https://urbanlabs.uchicago.edu/attachments/c294048f0ccedb2d0f7570c95a9dc27a7d751738/store/5dad037e6ec7c7da989307b597c68437c1a36780da701fba95abc4566d32/Mayor+Emanuel%2C+Ken+Griffin%2C+University+of+Chicago+Crime+Lab+Announce+%2410....pdf">funding2</a>].</p></li>
-<li><p>Research paper drafted by several of my colleagues containing
-more specific information on the project: [<a
-href="https://www.nber.org/system/files/working_papers/w29851/w29851.pdf">research
-paper</a>]</p></li>
-<li><p>The Chicago Police Dept. special order on SDSC operations within
-law enforcement setting: [<a
-href="http://directives.chicagopolice.org/CPDSergeantsExam_2019/directives/data/a7a57b85-16c2efbe-c2416-c2fa-edbba6051837c01c.html">CPD
-directives</a>]</p></li>
-<li><p>Internal evaluation and independent third party evaluation
-conducted by the RAND Corporation pertaining to the effectiveness and
-results of the project: [<a
-href="https://www.niss.org/sites/default/files/4.SDSC_Ludwig_20190619.pdf">Crime
-Lab evaluation</a> | <a href="pdf/rand.pdf">RAND
-evaluation</a>]</p></li>
-<li><p>SDSC was recognized by the Integrated Justice Information Systems
-(NJIS) Institute and received the 2021 Thomas J. O’Reilly Innovation
-Award at its 2021 National Symposium: [<a
-href="https://www.ijis.org/news/558788/Chicago-PDs-Strategic-Decision-Support-Centers-Initiative-Receives-2021-Innovation-Award.htm">award
-article</a>]</p></li>
+<li><p>UChicago articles regarding the history and background of the project: [<a href="https://urbanlabs.uchicago.edu/attachments/c83b0a5180de9f7fec83d5ffdaa75fa6a9233a38/store/a307ce9c99429b8e276b2fa982ce2df90a44f1207258a7c1ca95914f1342/city+club+Jan+2018_FINAL.PDF">history</a> | <a href="https://urbanlabs.uchicago.edu/programs/strategic-decision-support-centers-sdscs">overview</a> | <a href="https://news.uchicago.edu/story/10-million-grant-will-support-crime-lab-collaboration-police-innovation">funding1</a> | <a href="https://urbanlabs.uchicago.edu/attachments/c294048f0ccedb2d0f7570c95a9dc27a7d751738/store/5dad037e6ec7c7da989307b597c68437c1a36780da701fba95abc4566d32/Mayor+Emanuel%2C+Ken+Griffin%2C+University+of+Chicago+Crime+Lab+Announce+%2410....pdf">funding2</a>].</p></li>
+<li><p>Research paper drafted by several of my colleagues containing more specific information on the project: [<a href="https://www.nber.org/system/files/working_papers/w29851/w29851.pdf">research paper</a>]</p></li>
+<li><p>Internal evaluation and independent third party evaluation conducted by the RAND Corporation pertaining to the effectiveness and results of the project: [<a href="https://www.niss.org/sites/default/files/4.SDSC_Ludwig_20190619.pdf">Crime Lab evaluation</a> | <a href="pdf/rand.pdf">RAND evaluation</a>]</p></li>
+<li><p>SDSC was recognized by the Integrated Justice Information Systems (NJIS) Institute and received the 2021 Thomas J. O’Reilly Innovation Award at its 2021 National Symposium: [<a href="https://ijis.org/awards/thomas-j-oreilly-innovation-award/">past award winners</a>]</p></li>
 </ul>
-<h2 id="city-of-chicago-violence-reduction-dashboard">City of Chicago:
-Violence Reduction Dashboard</h2>
-<p>One critical component of my work with the City of Chicago Office of
-the Mayor was the Regional Coordination Meeting where I was in charge of
-the South Side data. The goal of the meeting was to identify and tackle
-violent crimes and other related issues with a wide range of agencies
-and organizations, including UChicago Crime Lab (with myself as
-representative), UChicago Medicine, Chicago Police Dept, Chicago Mayor’s
-Office, Chicago Dept of Street and Sanitation, Chicago Park District,
-Cook County State’s Attorney’s Office, Chicago CRED, and a number of
-other public agencies and outreach/non-profits.</p>
-<p>The bi-weekly meetings required myself and another analyst to
-manually produce a bi-weekly data/ stats packet to reflect the number of
-fatal shootings, non-fatal shootings, and non-shooting homicides. As
-time went on, we realized there should be a more efficient method of
-displaying and disseminating the crime analytics, thus the VR dashboard
-was born. After about 6 months of work, the VR Dashboard was officially
-launched on the City of Chicago’s Website as the first ever public data
-dashboard owned by the city. As one of the two analysts who created the
-dashboard, I also produced monthly update/troubleshooting newsletters,
-designed the cover page and base map of the dashboard, and trained and
-presented the tool to a wide range of public agencies, outreach
-organizations, and other stakeholders.</p>
-<p><img src="images/vrdash.jpg" /></p>
+<h2 id="city-of-chicago-violence-reduction-dashboard">City of Chicago: Violence Reduction Dashboard</h2>
+<p>A critical component of my work with the City of Chicago Office of the Mayor was leading the South Side data efforts for the Regional Coordination Meeting. This initiative brought together a diverse coalition of agencies and organizations—including UChicago Crime Lab (where I served as a representative), UChicago Medicine, the Chicago Police Department, the Chicago Mayor’s Office, the Chicago Department of Streets and Sanitation, the Chicago Park District, the Cook County State’s Attorney’s Office, Chicago CRED, and numerous other public agencies and nonprofits—to address violent crime and related issues.</p>
+<p>As part of these bi-weekly meetings, another analyst and I manually compiled a crime statistics report: tracking fatal shootings, non-fatal shootings, and non-shooting homicides. Recognizing the need for a more efficient and accessible approach, we developed the VR Dashboard, the first-ever public data dashboard launched by the City of Chicago. After six months of development, the dashboard went live on the city’s website, providing real-time crime analytics to stakeholders and the public.</p>
+<p>In addition to co-developing the dashboard, I was responsible for producing monthly update and troubleshooting newsletters, designing the cover page and base map, and leading training sessions and presentations for public agencies, outreach organizations, and other key stakeholders.
+<img src="images/vrdash.jpg" /></p>
 <figure>
-<img src="images/vrdash2.jpg"
-alt="A couple screenshots of the dashboard, made in Tableau and Tableau Prep" />
-<figcaption aria-hidden="true">A couple screenshots of the dashboard,
-made in Tableau and Tableau Prep</figcaption>
+<img src="images/vrdash2.jpg" alt="A couple screenshots of the dashboard, made in Tableau and Tableau Prep" />
+<figcaption aria-hidden="true">A couple screenshots of the dashboard, made in Tableau and Tableau Prep</figcaption>
 </figure>
-<p>As of May 27th, 2021, the VR Dashboard is officially open to the
-public:</p>
+<p>As of May 27th, 2021, the VR Dashboard is officially open to the public:</p>
 <ul>
-<li><p>To access the website: [<a
-href="https://www.chicago.gov/city/en/sites/vrd/home.html">Dashboard</a>]</p></li>
-<li><p>To access the data source: [<a
-href="https://www.chicago.gov/city/en/sites/vrd/home.html">Chicago Data
-Portal</a>]</p></li>
-<li><p>For details directly from the Office of the Mayor: [<a
-href="https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2021/may/ViolenceReductionDashboard.html">Mayor’s
-Press Release</a>] | [<a
-href="https://webapps1.chicago.gov/vrdashboard/resources/pdf/VR-Dashboard_UseTermsAgreement.pdf">VR
-Dashboard Use of Terms Agreement</a>]</p></li>
-<li><p>To see what the media is saying about this innovative tool: [<a
-href="https://chicago.cbslocal.com/2021/05/26/chicago-violence-reduction-dashboard/">CBS</a>]
-| [<a href="https://www.fox32chicago.com/video/937825">FOX</a>] | [<a
-href="https://www.msn.com/en-us/news/crime/city-launches-new-violence-reduction-dashboard-in-effort-to-improve-crime-data-reporting/ar-AAKpD29">MSN</a>]
-| [<a
-href="https://www.smartcitiesworld.net/news/news/chicago-launches-violence-reduction-dashboard-6464">Smart
-Cities World</a>] | [<a
-href="https://chicagodefender.com/the-city-of-chicago-and-the-university-of-chicagos-crime-lab-launch-the-citys-first-ever-violence-reduction-dashboard/">The
-Chicago Defender</a>]</p></li>
+<li><p>To access the website: [<a href="https://www.chicago.gov/city/en/sites/vrd/home.html">Dashboard</a>]</p></li>
+<li><p>To access the data source: [<a href="https://data.cityofchicago.org/browse?tags=violence+reduction&amp;sortBy=most_accessed&amp;pageSize=20">Chicago Data Portal</a>]</p></li>
+<li><p>For details directly from the Office of the Mayor: [<a href="https://www.chicago.gov/city/en/depts/mayor/press_room/press_releases/2021/may/ViolenceReductionDashboard.html">Mayor’s Press Release</a>] | [<a href="https://webapps1.chicago.gov/vrdashboard/resources/pdf/VR-Dashboard_UseTermsAgreement.pdf">VR Dashboard Use of Terms Agreement</a>]</p></li>
+<li><p>To see what the media is saying about this innovative tool: [<a href="https://chicago.cbslocal.com/2021/05/26/chicago-violence-reduction-dashboard/">CBS</a>] | [<a href="https://www.fox32chicago.com/video/937825">FOX</a>] | [<a href="https://www.msn.com/en-us/news/crime/city-launches-new-violence-reduction-dashboard-in-effort-to-improve-crime-data-reporting/ar-AAKpD29">MSN</a>] | [<a href="https://www.smartcitiesworld.net/news/news/chicago-launches-violence-reduction-dashboard-6464">Smart Cities World</a>] | [<a href="https://chicagodefender.com/the-city-of-chicago-and-the-university-of-chicagos-crime-lab-launch-the-citys-first-ever-violence-reduction-dashboard/">The Chicago Defender</a>]</p></li>
 </ul>
-<h2 id="chicago-police-dept.-consent-decree">Chicago Police Dept.
-Consent Decree</h2>
-<p>I had the opportunity of working on a series of projects under the
-Consent Decree, which is a federal mandate set forth by the US
-Department of Justice to reform law enforcement agencies. The consent
-decree had already been implemented in a number of police departments
-across the US, including the LAPD, Seattle PD, and NOPD, before arriving
-in Chicago in 2017. Much of the work is focused on building
-community-police relationship, improving resource/patrol efficiency, and
-examining personnel data on absences/furloughs among others.</p>
+<h2 id="chicago-police-dept.-consent-decree">Chicago Police Dept. Consent Decree</h2>
+<p>I had the opportunity to work on several projects under the Consent Decree, a federal mandate issued by the U.S. Department of Justice to reform law enforcement agencies. Prior to its implementation in Chicago in 2017, the Consent Decree had been enforced in multiple police departments across the country, including the LAPD, Seattle PD, and NOPD.</p>
+<p>My work focused on key areas such as strengthening community-police relations, enhancing resource and patrol efficiency, and analyzing personnel data—particularly regarding absences and furlough trends—to support informed policy decisions.</p>
 <ul>
-<li>For background information on Chicago Police Consent Decree: [<a
-href="http://chicagopoliceconsentdecree.org/about/">Illinois Attorney
-General</a>] | [<a href="https://cpdmonitoringteam.com/">CPD Independent
-Monitor Team</a>] | [<a
-href="https://www.chicago.gov/city/en/sites/police-reform/home/consent-decree.html#">City
-of Chicago</a>]</li>
-<li>To view CPD’s internal tracking of the consent decree progress: [<a
-href="https://home.chicagopolice.org/statistics-data/data-dashboards/consent-decree-compliance-dashboard/">Dashboard</a>]</li>
+<li>For background information on Chicago Police Consent Decree: [<a href="http://chicagopoliceconsentdecree.org/about/">Illinois Attorney General</a>] | [<a href="https://cpdmonitoringteam.com/">CPD Independent Monitor Team</a>] | [<a href="https://www.chicago.gov/city/en/sites/police-reform/home/consent-decree.html#">City of Chicago</a>]</li>
+<li>To view CPD’s internal tracking of the consent decree progress: [<a href="https://home.chicagopolice.org/statistics-data/data-dashboards/consent-decree-compliance-dashboard/">Dashboard</a>]</li>
 </ul>
 <p><br></p>
 <h1 id="participated-conferences">Participated Conferences</h1>
-<p>I have also attended a number of law enforcement and analytics
-conferences, including the Tableau Conference 2019, the International
-Association of Chiefs of Police Conference 2019, the Crimefighters
-Conference 2018, and the American Society of Criminology Annual Meeting
-2015.</p>
+<p>I have also attended a number of law enforcement and analytics conferences, including the Tableau Conference 2019, the International Association of Chiefs of Police Conference 2019, the Crimefighters Conference 2018, and the American Society of Criminology Annual Meeting 2015.</p>
 <figure>
-<img src="images/tableaugroup.jpg" style="width:85.0%"
-alt="Posing with my lovely colleagues from UChicago and CPD" />
-<figcaption aria-hidden="true">Posing with my lovely colleagues from
-UChicago and CPD</figcaption>
+<img src="images/tableaugroup.jpg" style="width:85.0%" alt="Posing with my lovely colleagues from UChicago and CPD" />
+<figcaption aria-hidden="true">Posing with my lovely colleagues from UChicago and CPD</figcaption>
 </figure>
 <figure>
-<img src="images/tableauparty.jpg" style="width:55.0%"
-alt="Me at the Tableau 2019 Data Night Out… after a complimentary makeup" />
-<figcaption aria-hidden="true">Me at the Tableau 2019 Data Night Out…
-after a complimentary makeup</figcaption>
+<img src="images/tableauparty.jpg" style="width:55.0%" alt="Me at the Tableau 2019 Data Night Out… after a complimentary makeup" />
+<figcaption aria-hidden="true">Me at the Tableau 2019 Data Night Out… after a complimentary makeup</figcaption>
 </figure>
 <ul>
-<li>If you’re interested in Tableau events and conferences please click
-here [<a
-href="https://www.tableau.com/community/eventshttps://www.tableau.com/community/events">Tableau</a>]</li>
+<li>If you’re interested in Tableau events and conferences please click here [<a href="https://www.tableau.com/community/events">Tableau</a>]</li>
 </ul>
-<p>At the Crimefighters Conference 2018, my team and I presented
-innovative data visualizations using Tableau dashboards and new
-approaches to smart policing in front of an audience from over 25 law
-enforcement agencies and a panel which included the former CPD’s Chief
-of Technical Services and former LAPD’s Deputy Chief of Detectives.</p>
+<p>At the 2018 Crimefighters Conference, my team and I presented innovative data visualizations using Tableau dashboards and introduced new approaches to smart policing. Our presentation was delivered to an audience representing over 25 law enforcement agencies and a judging panel that included the former Chief of Technical Services for the Chicago Police Department and the former Deputy Chief of Detectives for the LAPD.</p>
 <figure>
-<img src="images/present.jpg"
-alt="A colleague presenting my analytical report to showcase the smart policing aspect of the SDSC" />
-<figcaption aria-hidden="true">A colleague presenting my analytical
-report to showcase the smart policing aspect of the SDSC</figcaption>
+<img src="images/present.jpg" alt="A colleague presenting my analytical report to showcase the smart policing aspect of the SDSC" />
+<figcaption aria-hidden="true">A colleague presenting my analytical report to showcase the smart policing aspect of the SDSC</figcaption>
 </figure>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
