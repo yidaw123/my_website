@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Circana (formerly IRI and NPD Group)
 ## Project and Product Management
-In my current role as a Senior Manager II - Data Science, I oversee several pricing analytics products (for more information on what the tools can do please click [here](https://www.circana.com/solutions/alwayson-analytics/). In this capacity I lead a team of consultants, managers, and analysts to generate actionable insights that drive strategic decision-making. I am responsible for testing products, ETLs, and new features, as well as ensuring quality control and debugging for optimal performance. Additionally, I manage all analytics-related deliverables, including analyses, reports, trainings, and executive-level presentations and Q&A sessions."
+In my current role as a Senior Manager II - Data Science, I oversee several pricing analytics products (for more information on what the tools can do please click [here](https://www.circana.com/solutions/alwayson-analytics/). In this capacity I lead a team of consultants, managers, and analysts to generate actionable insights that drive strategic decision-making. I am responsible for testing products, ETLs, and new features, as well as ensuring quality control and debugging for optimal performance. Additionally, I manage all analytics-related deliverables, including analyses, reports, trainings, and executive-level presentations and Q&A sessions.
 
 ![The 2022 merger of IRI and the NPD Group helped propel the new combined organization even higher in the echelons of global market research firms.](images/Circana.jpg)
 
