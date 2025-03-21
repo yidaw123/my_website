@@ -14,14 +14,13 @@ d-title {
 /* === HEADINGS === */
 d-article h1 {
   font-size: 34px;
-  line-height: 1.4em;  /* FIX: Adjusted to prevent overlap */
-  margin-bottom: 0.5em; /* Adds spacing */
+  line-height: 0.2em;
+  margin-top: 2rem; /* Fix: Prevents TOC overlap on mobile */
 }
 
 d-article h2 {
   font-size: 27px;
-  line-height: 1.3em;  /* FIX: Adjusted to prevent overlap */
-  margin-bottom: 0.5em; /* Adds spacing */
+  line-height: 0.2em;
 }
 
 /* === CONTENT FONT SIZES === */
@@ -41,13 +40,13 @@ d-article {
 /* === TOC STYLING === */
 #TOC {
   position: fixed;
-  z-index: 1000;
-  left: 1.25em;
-  top: 100px;
-  width: 250px;
-  max-height: 80vh;
-  overflow-y: auto;
-  background: rgba(255, 255, 255, 0.9);
+  z-index: 1000; /* Ensures TOC is above other elements */
+  left: 1.25em; /* Moves TOC to the left */
+  top: 100px; /* Adjust TOC height position */
+  width: 250px; /* Adjust TOC width */
+  max-height: 80vh; /* Prevents TOC from being too long */
+  overflow-y: auto; /* Enables scrolling */
+  background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ddd;
@@ -55,15 +54,15 @@ d-article {
 
 /* Fixes double-click issue on TOC links */
 #TOC a {
-  pointer-events: auto;
-  color: #0073e6;
+  pointer-events: auto; /* Ensures links work properly on first click */
+  color: #0073e6; /* Blue links */
   font-weight: bold;
   text-decoration: none;
 }
 
 /* TOC Hover Effect */
 #TOC a:hover {
-  color: #5D3FD3;
+  color: #5D3FD3; /* Color on hover */
   text-decoration: underline;
 }
 
@@ -79,28 +78,30 @@ img {
 @media screen and (max-width: 900px) {
   /* Adjust title for smaller screens */
   d-title {
-    font-size: 24px;
+    font-size: 24px; /* Smaller font size */
     padding-top: 2rem;
   }
 
   /* Adjust heading sizes for better readability */
   d-article h1 {
     font-size: 28px;
-    line-height: 1.3em; /* FIX: Ensure spacing */
+    line-height: 1.3em; 
+    margin-top: 4rem; /* Fix: Extra spacing to prevent TOC overlap */
   }
 
   d-article h2 {
     font-size: 22px;
-    line-height: 1.3em; /* FIX: Ensure spacing */
+    line-height: 1.3em; 
   }
 
   /* Fix TOC overlap issue */
   #TOC {
     position: relative;
     width: 100%; /* Makes TOC full-width on smaller screens */
-    background: rgba(255, 255, 255, 0.95); /* Keeps it readable */
+    background: rgba(255, 255, 255, 0.95);
     padding: 8px;
     text-align: center;
+    margin-bottom: 2rem; /* Fix: Adds spacing below TOC */
   }
 
   /* Ensure TOC content doesn't overlap */
