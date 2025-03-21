@@ -42,7 +42,7 @@ d-article {
   position: fixed; /* Keep TOC fixed for larger screens */
   z-index: 1000; /* Ensures TOC is above other elements */
   left: 1.25em; /* Moves TOC to the left */
-  top: 350px; /* Adjust TOC height position on desktop below banner */
+  top: 100px; /* Adjust TOC height position on desktop below banner */
   width: 250px; /* Adjust TOC width */
   max-height: 80vh; /* Prevents TOC from being too long */
   overflow-y: auto; /* Enables scrolling */
