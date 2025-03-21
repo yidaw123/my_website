@@ -123,11 +123,11 @@ img {
     width: 90%; /* Ensure the TOC fits within the screen width */
     max-width: 400px; /* Limit max width to prevent cutting off */
     margin-left: 1%; /* Move TOC a bit more to the left */
-    margin-right: auto; /* Keeps it aligned */
+    margin-right: 5%; /* Keeps it aligned */
     background: rgba(255, 255, 255, 0.95);
     padding: 20px; /* More padding on mobile */
     text-align: center;
-    margin-top: 2rem; /* Adds space above the TOC */
+    margin-top: 0.5rem; /* Adds space above the TOC */
     margin-bottom: 2rem; /* Adds space below the TOC */
   }
 
