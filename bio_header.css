@@ -119,17 +119,16 @@ img {
 
   /* Adjust TOC on mobile: Center it and ensure it's fully visible */
   #TOC {
-    position: relative; /* Change position to relative for mobile */
-    top: auto; /* Removed the web version top position for mobile */
-    width: 90%; /* Ensure the TOC fits within the screen width */
-    max-width: 400px; /* Limit max width to prevent cutting off */
-    margin-left: 1.5%; /* Move TOC a bit more to the left */
-    margin-right: auto; /* Keeps it aligned */
-    background: rgba(255, 255, 255, 0.95);
-    padding: 20px; /* More padding on mobile */
-    text-align: center;
-    margin-top: -9rem; /* Adds space above the TOC */
-    margin-bottom: 4rem; /* Adds space below the TOC */
+      position: relative; /* Keep position relative for mobile */
+      top: 50px; /* Moves TOC down 50px */
+      left: 50%; /* Centers TOC horizontally */
+      transform: translateX(-50%); /* Adjust to exactly center it */
+      width: 90%; /* Ensure the TOC fits within the screen width */
+      max-width: 400px; /* Limit max width to prevent cutting off */
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px; /* More padding on mobile */
+      text-align: center;
+      margin-bottom: 4rem; /* Adds space below the TOC */
   }
 
   /* Ensure TOC links are displayed properly */
