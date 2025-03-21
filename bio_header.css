@@ -117,13 +117,16 @@ img {
     line-height: 1.3em;
   }
 
-  /* Adjust TOC on mobile: Position it below the banner */
+  /* Adjust TOC on mobile: Center it and ensure it's fully visible */
   #TOC {
     position: relative; /* Change position to relative for mobile */
-    width: 100%; /* Full width on smaller screens */
+    width: 90%; /* Ensure the TOC fits within the screen width */
+    max-width: 400px; /* Limit max width to prevent cutting off */
+    margin: 0 auto; /* Center TOC horizontally */
     background: rgba(255, 255, 255, 0.95);
     padding: 20px; /* More padding on mobile */
     text-align: center;
+    margin-top: 2rem; /* Adds space above the TOC */
     margin-bottom: 2rem; /* Adds space below the TOC */
   }
 
@@ -131,5 +134,10 @@ img {
   #TOC a {
     display: block;
     padding: 5px;
+  }
+
+  /* Add more space between TOC and first heading on mobile */
+  d-article h1 {
+    margin-top: 3rem; /* Adds more space above the first heading */
   }
 }
