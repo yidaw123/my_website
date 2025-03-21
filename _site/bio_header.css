@@ -122,7 +122,7 @@ img {
     position: relative; /* Change position to relative for mobile */
     width: 90%; /* Ensure the TOC fits within the screen width */
     max-width: 400px; /* Limit max width to prevent cutting off */
-    margin-left: 10%; /* Move TOC a bit more to the left */
+    margin-left: 1%; /* Move TOC a bit more to the left */
     margin-right: auto; /* Keeps it aligned */
     background: rgba(255, 255, 255, 0.95);
     padding: 20px; /* More padding on mobile */
