@@ -101,7 +101,6 @@ img {
     background: rgba(255, 255, 255, 0.95);
     padding: 8px;
     text-align: center;
-    margin-top: 2rem; /* Moves TOC lower on mobile */
     margin-bottom: 2rem; /* Adds space below the TOC */
   }
 
