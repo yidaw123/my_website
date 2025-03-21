@@ -12,6 +12,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo');
 @import url('https://fonts.googleapis.com/css2?family=Alata');
 
+html, body {
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+}
+
 html {
   /*-- Main font sizes --*/
   --title-size:      50px;
@@ -49,6 +54,7 @@ html {
   padding: 10px 20px;
   background-color: #333; /* Adjust background color to match your design */
   flex-wrap: wrap; /* Allows for wrapping of navbar items on smaller screens */
+  width: 100%; /* Ensure navbar takes full width */
 }
 
 .navbar a,
@@ -75,6 +81,7 @@ html {
     flex-direction: column;
     align-items: center;
     padding: 15px 0;
+    width: 100%; /* Ensure navbar takes full width */
   }
 
   .navbar a,
@@ -96,6 +103,7 @@ html {
 @media screen and (max-width: 480px) {
   .navbar {
     padding: 10px 0;
+    width: 100%;
   }
 
   .navbar a {
