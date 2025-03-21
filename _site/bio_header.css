@@ -127,8 +127,8 @@ img {
     background: rgba(255, 255, 255, 0.95);
     padding: 20px; /* More padding on mobile */
     text-align: center;
-    margin-top: 0.5rem; /* Adds space above the TOC */
-    margin-bottom: 2rem; /* Adds space below the TOC */
+    margin-top: 1%; /* Adds space above the TOC */
+    margin-bottom: 1%; /* Adds space below the TOC */
   }
 
   /* Ensure TOC links are displayed properly */
