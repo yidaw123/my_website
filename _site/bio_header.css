@@ -1,4 +1,4 @@
- /* === TITLE STYLING === */
+/* === TITLE STYLING === */
 d-title {
   padding-top: 8rem;
   font-weight: 800;
@@ -14,12 +14,14 @@ d-title {
 /* === HEADINGS === */
 d-article h1 {
   font-size: 34px;
-  line-height: 0.2em;
+  line-height: 1.4em;  /* FIX: Adjusted to prevent overlap */
+  margin-bottom: 0.5em; /* Adds spacing */
 }
 
 d-article h2 {
   font-size: 27px;
-  line-height: 0.2em;
+  line-height: 1.3em;  /* FIX: Adjusted to prevent overlap */
+  margin-bottom: 0.5em; /* Adds spacing */
 }
 
 /* === CONTENT FONT SIZES === */
@@ -39,13 +41,13 @@ d-article {
 /* === TOC STYLING === */
 #TOC {
   position: fixed;
-  z-index: 1000; /* Ensures TOC is above other elements */
-  left: 1.25em; /* Moves TOC to the left */
-  top: 100px; /* Adjust TOC height position */
-  width: 250px; /* Adjust TOC width */
-  max-height: 80vh; /* Prevents TOC from being too long */
-  overflow-y: auto; /* Enables scrolling */
-  background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
+  z-index: 1000;
+  left: 1.25em;
+  top: 100px;
+  width: 250px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.9);
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ddd;
@@ -53,15 +55,15 @@ d-article {
 
 /* Fixes double-click issue on TOC links */
 #TOC a {
-  pointer-events: auto; /* Ensures links work properly on first click */
-  color: #0073e6; /* Blue links */
+  pointer-events: auto;
+  color: #0073e6;
   font-weight: bold;
   text-decoration: none;
 }
 
 /* TOC Hover Effect */
 #TOC a:hover {
-  color: #5D3FD3; /* color on hover */
+  color: #5D3FD3;
   text-decoration: underline;
 }
 
@@ -77,23 +79,33 @@ img {
 @media screen and (max-width: 900px) {
   /* Adjust title for smaller screens */
   d-title {
-    font-size: 24px; /* Smaller font size */
+    font-size: 24px;
     padding-top: 2rem;
   }
 
   /* Adjust heading sizes for better readability */
   d-article h1 {
     font-size: 28px;
+    line-height: 1.3em; /* FIX: Ensure spacing */
   }
 
   d-article h2 {
     font-size: 22px;
+    line-height: 1.3em; /* FIX: Ensure spacing */
   }
 
-  /* Adjust TOC for small screens */
+  /* Fix TOC overlap issue */
   #TOC {
     position: relative;
     width: 100%; /* Makes TOC full-width on smaller screens */
-    background: none;
+    background: rgba(255, 255, 255, 0.95); /* Keeps it readable */
+    padding: 8px;
+    text-align: center;
+  }
+
+  /* Ensure TOC content doesn't overlap */
+  #TOC a {
+    display: block;
+    padding: 5px;
   }
 }
