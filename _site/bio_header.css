@@ -1,16 +1,18 @@
+ /* === TITLE STYLING === */
 d-title {
-padding-top:8rem;
-font-weight: 800;
-font-size:32px;
-color: white;
-background: 
-    /* bottom, image */
-    url(images/bio2.jpg);
-background-size:cover !important;
-background-position: top -45px left;
+  padding-top: 8rem;
+  font-weight: 800;
+  font-size: 32px;
+  color: white;
+  background: url(images/bio2.jpg);
+  background-size: cover !important;
+  background-position: top -45px left;
+  width: 100%;
+  text-align: center;
 }
 
-d-article h1{
+/* === HEADINGS === */
+d-article h1 {
   font-size: 34px;
   line-height: 0.2em;
 }
@@ -20,31 +22,78 @@ d-article h2 {
   line-height: 0.2em;
 }
 
+/* === CONTENT FONT SIZES === */
 .d-contents {
-  --heading-size:    20px;
-  --contents-size:   14px;
+  --heading-size: 20px;
+  --contents-size: 14px;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
+
 d-article {
-    contain: none;
-  }
+  contain: none;
+}
+
+/* === TOC STYLING === */
 #TOC {
   position: fixed;
-  z-index: 50;
-  background: none;     /* transparent */
-  left: 1.25em;        /* changes the left edge gap */
-  right: 78em;
-  bottom: 7em
-  padding: 9px;           /* optional */
-  border-radius: 3px;      /* optional */
+  z-index: 1000; /* Ensures TOC is above other elements */
+  left: 1.25em; /* Moves TOC to the left */
+  top: 100px; /* Adjust TOC height position */
+  width: 250px; /* Adjust TOC width */
+  max-height: 80vh; /* Prevents TOC from being too long */
+  overflow-y: auto; /* Enables scrolling */
+  background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Fixes double-click issue on TOC links */
+#TOC a {
+  pointer-events: auto; /* Ensures links work properly on first click */
+  color: #0073e6; /* Blue links */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* TOC Hover Effect */
+#TOC a:hover {
+  color: #5D3FD3; /* color on hover */
+  text-decoration: underline;
+}
+
+/* === IMAGE SCALING FOR MOBILE === */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* === MOBILE RESPONSIVENESS FIXES === */
+@media screen and (max-width: 900px) {
+  /* Adjust title for smaller screens */
+  d-title {
+    font-size: 24px; /* Smaller font size */
+    padding-top: 2rem;
   }
 
-/* Hide the ToC when resized to mobile or tablet:  480px, 768px, 900px */
-@media screen and (max-width: 900px) {
-#TOC {
+  /* Adjust heading sizes for better readability */
+  d-article h1 {
+    font-size: 28px;
+  }
+
+  d-article h2 {
+    font-size: 22px;
+  }
+
+  /* Adjust TOC for small screens */
+  #TOC {
     position: relative;
+    width: 100%; /* Makes TOC full-width on smaller screens */
+    background: none;
   }
 }
