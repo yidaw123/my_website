@@ -42,7 +42,7 @@ d-article {
   position: fixed; /* Keep TOC fixed for larger screens */
   z-index: 1000; /* Ensures TOC is above other elements */
   left: 1.25em; /* Moves TOC to the left */
-  top: 100px; /* Adjust TOC height position on desktop below banner */
+  top: 300px; /* Adjust TOC height position on desktop below banner */
   width: 250px; /* Adjust TOC width */
   max-height: 80vh; /* Prevents TOC from being too long */
   overflow-y: auto; /* Enables scrolling */
@@ -122,13 +122,13 @@ img {
     position: relative; /* Change position to relative for mobile */
     width: 90%; /* Ensure the TOC fits within the screen width */
     max-width: 400px; /* Limit max width to prevent cutting off */
-    margin-left: 3%; /* Move TOC a bit more to the left */
+    margin-left: 2%; /* Move TOC a bit more to the left */
     margin-right: auto; /* Keeps it aligned */
     background: rgba(255, 255, 255, 0.95);
     padding: 20px; /* More padding on mobile */
     text-align: center;
     margin-top: -9rem; /* Adds space above the TOC */
-    margin-bottom: 5rem; /* Adds space below the TOC */
+    margin-bottom: 4rem; /* Adds space below the TOC */
   }
 
   /* Ensure TOC links are displayed properly */
