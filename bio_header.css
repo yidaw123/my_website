@@ -120,9 +120,10 @@ img {
   /* Adjust TOC on mobile: Center it and ensure it's fully visible */
   #TOC {
     position: relative; /* Change position to relative for mobile */
+    top: auto; /* Removed the web version top position for mobile */
     width: 90%; /* Ensure the TOC fits within the screen width */
     max-width: 400px; /* Limit max width to prevent cutting off */
-    margin-left: 2%; /* Move TOC a bit more to the left */
+    margin-left: 1.5%; /* Move TOC a bit more to the left */
     margin-right: auto; /* Keeps it aligned */
     background: rgba(255, 255, 255, 0.95);
     padding: 20px; /* More padding on mobile */
