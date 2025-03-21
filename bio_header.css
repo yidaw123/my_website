@@ -41,15 +41,17 @@ d-article {
 #TOC {
   position: fixed; /* Keep TOC fixed for larger screens */
   z-index: 1000; /* Ensures TOC is above other elements */
-  left: 1.25em; /* Keeps TOC on the left */
+  left: 1.25em; /* Moves TOC to the left */
   top: 100px; /* Adjust TOC height position on desktop below banner */
   width: 250px; /* Adjust TOC width */
   max-height: 80vh; /* Prevents TOC from being too long */
   overflow-y: auto; /* Enables scrolling */
   background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
-  padding: 10px;
+  padding: 20px; /* Increased padding for more space inside the TOC */
   border-radius: 8px;
   border: 1px solid #ddd;
+  margin-top: 20px; /* Added margin to create more space above TOC */
+  margin-bottom: 20px; /* Added margin for more space below TOC */
 }
 
 /* Fixes double-click issue on TOC links */
@@ -58,12 +60,33 @@ d-article {
   color: #0073e6; /* Blue links */
   font-weight: bold;
   text-decoration: none;
+  font-size: 14px; /* Default font size */
+}
+
+/* TOC font size adjustments */
+#TOC ul > li > a {
+  font-size: 16px; /* Larger font for top-level (H1) */
+  font-weight: 900;
+}
+
+#TOC ul > li > ul > li > a {
+  font-size: 14px; /* Keeps H2 slightly smaller */
+  font-weight: 700;
 }
 
 /* TOC Hover Effect */
 #TOC a:hover {
   color: #5D3FD3; /* Color on hover */
   text-decoration: underline;
+}
+
+/* Ensure proper spacing and visibility */
+#TOC ul {
+  padding-left: 10px;
+}
+
+#TOC ul li {
+  margin-bottom: 5px;
 }
 
 /* === IMAGE SCALING FOR MOBILE === */
@@ -99,7 +122,7 @@ img {
     position: relative; /* Change position to relative for mobile */
     width: 100%; /* Full width on smaller screens */
     background: rgba(255, 255, 255, 0.95);
-    padding: 8px;
+    padding: 20px; /* More padding on mobile */
     text-align: center;
     margin-bottom: 2rem; /* Adds space below the TOC */
   }
