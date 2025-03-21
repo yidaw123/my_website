@@ -42,7 +42,7 @@ d-article {
   position: fixed;
   z-index: 1000; /* Ensures TOC is above other elements */
   left: 1.25em; /* Moves TOC to the left */
-  top: 100px; /* Adjust TOC height position */
+  top: 350px; /* Adjust TOC height position on desktop below banner*/
   width: 250px; /* Adjust TOC width */
   max-height: 80vh; /* Prevents TOC from being too long */
   overflow-y: auto; /* Enables scrolling */
@@ -85,26 +85,27 @@ img {
   /* Adjust heading sizes for better readability */
   d-article h1 {
     font-size: 28px;
-    line-height: 1.3em; 
+    line-height: 1.3em;
     margin-top: 4rem; /* Fix: Extra spacing to prevent TOC overlap */
   }
 
   d-article h2 {
     font-size: 22px;
-    line-height: 1.3em; 
+    line-height: 1.3em;
   }
 
-  /* Fix TOC overlap issue */
+  /* Adjust TOC on mobile: Position it below the banner */
   #TOC {
-    position: relative;
-    width: 100%; /* Makes TOC full-width on smaller screens */
+    position: relative; /* Makes TOC scroll with content */
+    width: 100%; /* Full width on smaller screens */
     background: rgba(255, 255, 255, 0.95);
     padding: 8px;
     text-align: center;
-    margin-bottom: 2rem; /* Fix: Adds spacing below TOC */
+    margin-top: 2rem; /* Moves TOC lower on mobile */
+    margin-bottom: 2rem; /* Adds space below the TOC */
   }
 
-  /* Ensure TOC content doesn't overlap */
+  /* Ensure TOC links are displayed properly */
   #TOC a {
     display: block;
     padding: 5px;
