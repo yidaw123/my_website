@@ -120,7 +120,7 @@ img {
   /* Adjust TOC on mobile: Center it and ensure it's fully visible */
   #TOC {
       position: relative; /* Keep position relative for mobile */
-      top: 10px; /* Moves TOC down 50px */
+      top: 5px; /* Moves TOC down 50px */
       left: 50%; /* Centers TOC horizontally */
       transform: translateX(-50%); /* Adjust to exactly center it */
       width: 90%; /* Ensure the TOC fits within the screen width */
@@ -128,7 +128,7 @@ img {
       background: rgba(255, 255, 255, 0.95);
       padding: 20px; /* More padding on mobile */
       text-align: center;
-      margin-bottom: 1rem; /* Adds space below the TOC */
+      margin-bottom: 0rem; /* Adds space below the TOC */
   }
 
   /* Ensure TOC links are displayed properly */
